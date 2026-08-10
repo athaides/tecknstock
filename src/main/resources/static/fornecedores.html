@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoStock - Fornecedores</title>
+    <link rel="stylesheet" href="css/produtos.css">
+</head>
+<body>
+<div class="layout">
+    <!-- MENU LATERAL -->
+    <aside class="sidebar">
+        <h2>TecnoStock</h2>
+        <a href="produtos.html"> Principal</a>
+        <a href="usuarios.html"> Usuários</a>
+        <a href="fornecedores.html"> Fornecedores</a>
+        <a href="relatorios.html"> 📊Relatórios</a>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="main-content">
+        <div class="container">
+            <!-- TOPO -->
+            <header>
+                <div>
+                    <h1>Fornecedores</h1>
+                    <p>Gerenciamento de Fornecedores</p>
+                </div>
+            </header>
+
+            <!-- FORMULÁRIO -->
+            <section class="card cadastro">
+                <h2>Cadastrar Fornecedor</h2>
+                <div class="form-grid">
+                    <!-- NOME -->
+                    <div class="input-group">
+                        <label for="nome">Nome do Fornecedor</label>
+                        <input type="text" id="nome" placeholder="Ex: Samsung Brasil">
+                    </div>
+                    <!-- CNPJ -->
+                    <div class="input-group">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" id="cnpj" placeholder="00.000.000/0001-00">
+                    </div>
+                    <!-- TELEFONE -->
+                    <div class="input-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" id="telefone" placeholder="(11) 99999-9999">
+                    </div>
+                </div>
+                <!-- BOTÃO -->
+                <button class="btn-primary" onclick="salvarFornecedor()">Salvar Fornecedor</button>
+                <!-- MENSAGEM -->
+                <p id="mensagem"></p>
+            </section>
+
+            <!-- LISTA -->
+            <section class="card lista">
+                <div class="topo-lista">
+                    <h2>Fornecedores Cadastrados</h2>
+
+                    <!-- ADICIONADO: CAMPO DE BUSCA COM LUPA -->
+                    <div class="busca-container">
+                        <span class="lupa-icone">&#128269;</span>
+                        <input
+                                type="text"
+                                id="inputBuscaFornecedor"
+                                placeholder="Pesquisar fornecedor..."
+                                onkeyup="filtrarFornecedores()"
+                        >
+                    </div>
+
+                    <button class="btn-refresh" onclick="carregarFornecedores()">Atualizar</button>
+                </div>
+                <div id="listaFornecedores" class="produtos-grid"></div>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="js/fornecedores.js"></script>
+</body>
+</html>

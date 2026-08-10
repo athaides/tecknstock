@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TecnoStock - Usuários</title>
+
+    <link rel="stylesheet" href="css/produtos.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- MENU -->
+    <aside class="sidebar">
+
+        <h2>TecnoStock</h2>
+
+        <a href="produtos.html"> Principal</a>
+        <a href="usuarios.html"> Usuários</a>
+        <a href="fornecedores.html"> Fornecedores</a>
+        <a href="relatorios.html"> 📊Relatórios</a>
+
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="main-content">
+
+        <div class="container">
+
+            <!-- TOPO -->
+            <header>
+
+                <div>
+
+                    <h1>
+                        Usuarios:
+                    </h1>
+
+                    <p>
+                        Gerenciamento de Usuários
+                    </p>
+
+                </div>
+
+            </header>
+
+            <!-- FORM -->
+            <section class="card cadastro">
+
+                <h2>
+                    Cadastrar Usuário
+                </h2>
+
+                <div class="form-grid">
+
+                    <!-- CODIGO -->
+                    <div class="input-group">
+
+                        <label for="codigo">
+                            Código
+                        </label>
+
+                        <input
+                                type="text"
+                                id="codigo"
+                                placeholder="Ex: admin">
+
+                    </div>
+
+                    <!-- SENHA -->
+                    <div class="input-group">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <input
+                                type="password"
+                                id="senha"
+                                placeholder="Digite a senha">
+
+                    </div>
+
+                    <!-- TIPO -->
+                    <div class="input-group">
+
+                        <label for="tipo">
+                            Tipo
+                        </label>
+
+                        <select id="tipo">
+
+                            <option value="ADMIN">
+                                ADMIN
+                            </option>
+
+                            <option value="FUNCIONARIO">
+                                FUNCIONARIO
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <button
+                        class="btn-primary"
+                        onclick="salvarUsuario()">
+
+                    Salvar Usuário
+
+                </button>
+
+                <p id="mensagem"></p>
+
+            </section>
+
+            <!-- LISTA -->
+            <!-- LISTA DE USUÁRIOS -->
+            <section class="card lista">
+                <div class="topo-lista">
+                    <h2>Usuários Cadastrados</h2>
+
+                    <!-- CAMPO DE BUSCA COM LUPA PARA USUÁRIOS -->
+                    <div class="busca-container">
+                        <span class="lupa-icone">&#128269;</span>
+                        <input
+                                type="text"
+                                id="inputBuscaUsuario"
+                                placeholder="Pesquisar usuário..."
+                                onkeyup="filtrarUsuarios()"
+                        >
+                    </div>
+
+                    <button class="btn-refresh" onclick="carregarUsuarios()">
+                        Atualizar
+                    </button>
+                </div>
+
+                <div id="listaUsuarios" class="produtos-grid">
+                    <!-- Os usuários serão carregados aqui via JS -->
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/usuarios.js"></script>
+
+</body>
+</html>

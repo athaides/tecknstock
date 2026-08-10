@@ -1,0 +1,113 @@
+/* ==========================================================================
+   TELA DE LOGIN - TECNOSTOCK (Mantenha as variáveis e adicione este código)
+   ========================================================================== */
+
+:root {
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --bg-input: #334155;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --danger: #ef4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Centraliza a caixa de login vertical e horizontalmente na tela */
+body {
+    background: var(--bg-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-main);
+    padding: 20px;
+}
+
+/* Container principal de login */
+.login-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* Caixa interna que simula os cards das outras páginas */
+.login-container .box {
+    background: var(--bg-card);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border: 1px solid #2e3e56;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento idêntico entre os inputs e o botão */
+}
+
+/* Título TecnoStock estilizado */
+.login-container h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+/* Campos de entrada (Usuário e Senha) */
+.login-container input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: var(--bg-input);
+    color: var(--text-main);
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.login-container input:focus {
+    border-color: var(--primary);
+    background: #1e293b;
+}
+
+.login-container input::placeholder {
+    color: #64748b;
+}
+
+/* Botão "Entrar" */
+.login-container button {
+    width: 100%;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background: var(--primary);
+    color: white;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+/* Mensagem de Erro */
+#erro {
+    color: var(--danger);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    min-height: 20px; /* Evita que a caixa mude de tamanho repentinamente ao exibir o erro */
+}

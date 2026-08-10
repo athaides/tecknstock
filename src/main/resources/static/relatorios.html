@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Relatórios - TecnoStock</title>
+
+    <link rel="stylesheet"
+          href="css/produtos.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- MENU -->
+    <aside class="sidebar">
+
+        <h2>TecnoStock</h2>
+
+        <a href="produtos.html"> Principal</a>
+        <a href="usuarios.html"> Usuários</a>
+        <a href="fornecedores.html"> Fornecedores</a>
+        <a href="relatorios.html"> 📊Relatórios</a>
+
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="main-content">
+
+        <div class="container">
+
+            <header>
+
+                <div>
+
+                    <h1>
+                        📊 Relatórios Gerais
+                    </h1>
+
+                    <p>
+                        Resumo geral do sistema
+                    </p>
+
+                </div>
+
+            </header>
+
+            <!-- CARDS -->
+            <section class="cards-relatorio">
+
+                <div class="card-relatorio">
+
+                    <h3>Total Produtos</h3>
+
+                    <p id="totalProdutos">0</p>
+
+                </div>
+
+                <div class="card-relatorio">
+
+                    <h3>Total Estoque</h3>
+
+                    <p id="totalEstoque">0</p>
+
+                </div>
+
+            </section>
+
+            <!-- TABELA -->
+            <section class="card lista">
+
+                <div class="topo-lista">
+
+                    <h2>
+                        Produtos
+                    </h2>
+
+                    <button
+                            class="btn-primary"
+                            onclick="window.print()">
+
+                        Gerar PDF
+
+                    </button>
+
+                </div>
+
+                <table class="tabela-relatorio">
+
+                    <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody id="corpoTabela">
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/relatorios.js"></script>
+
+</body>
+</html>

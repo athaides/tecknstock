@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0d1f17;
+  color: #fff;
+}
+
+/* LOGIN */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  background: #163d2a;
+  padding: 40px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+h1 {
+  color: #4CAF50;
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  background: #2e7d32;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #388e3c;
+}
+
+/* DASHBOARD */
+.layout {
+  display: flex;
+}
+
+/* MENU LATERAL */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #122a1d;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  color: #4CAF50;
+}
+
+.sidebar a {
+  display: block;
+  margin: 10px 0;
+  color: white;
+  text-decoration: none;
+}
+
+/* CONTEÚDO */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* TABELA */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #2e7d32;
+}
+
+/* CARD */
+.card {
+  background: #163d2a;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TecnoStock - Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/produtos.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+  <!-- MENU LATERAL -->
+  <aside class="sidebar">
+
+    <h2>TecnoStock</h2>
+
+    <a href="dashboard.html"> Principal</a>
+    <a href="produtos.html"> Produtos</a>
+    <a href="usuarios.html"> Usuários</a>
+    <a href="fornecedores.html"> Fornecedores</a>
+    <a href="relatorios.html">📊 Relatórios</a>
+  </aside>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="main-content">
+
+    <!-- AQUI começa seu código antigo -->
+    <div class="container">
+
+      <header>
+        <div>
+          <h1>📦 TecnoStock</h1>
+          <p>Gerenciamento de Produtos</p>
+        </div>
+      </header>
+
+
+
+      <!-- GRÁFICO -->
+      <section class="card">
+        <h2>Distribuição de Estoque</h2>
+
+        <canvas id="graficoProdutos"></canvas>
+      </section>
+
+
+
+    </div>
+
+  </main>
+
+</div>
+
+<script src="js/produtos.js"></script>
+
+</body>
+</html>
